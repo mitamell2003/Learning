@@ -73,3 +73,45 @@ A = "Hello"
 - Tên biến `chỉ có thể`chứa các chữ cái, số và dấu gạch dưới.
 - Tên biến phân biệt giữa chữ hoa và chữ thường (tuổi, Tuổi, TUỔI là ba biến khác nhau).
 - Tên biến không thể chứa các từ khóa của Python.
+```py
+Name = 'mini'
+Name_Cat = "mini"
+_Name = "mini"
+Name_01 = 'mini'
+name = "cat"
+# True
+01 = 'mini'
+and = "mini"
+Name cat = "mini"
+# False
+```
+# Gán giá trị cho nhiều biến
+- có thể gán nhiều giá trị cho một biến trong một dòng.
+```py
+X, Y, Z = "Chó", "Mèo", "Chuột"
+print(X)
+print(Y)
+print(Z)
+```
+# Gán một giá trị cho nhiều biến
+```py
+X = Y = Z = "Mây"
+print(X)
+print(Y)
+print(Z)
+```
+# Giải nén
+- khi có một tập hợp các giá trị có thể trích xuất thành các biến
+```py
+Trái_Cây = ["Cam", "Mận", "Xoài"]
+X, Y, Z = Trái_Cây
+print(X)
+print(Y)
+print(Z)
+```
+# Hàm `print()`
+- Có thể viết liền các biến với nhau bằng dấu `+` hoặc `,`
+- Lưu ý: Dấu `+` chỉ dùng khi các biến có cùng kiểu dữ liệu với nhau
+```py
+
+```

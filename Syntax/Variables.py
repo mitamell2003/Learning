@@ -17,3 +17,12 @@
 # print(type(X))
 # print(type(Y))
 # print(type(Z))
+# X, Y, Z = "Chó", "Mèo", "Chuột"
+# print(X)
+# print(Y)
+# print(Z)
+# Trái_Cây = ["Cam", "Mận", "Xoài"]
+# X, Y, Z = Trái_Cây
+# print(X)
+# print(Y)
+# print(Z)
