@@ -1,4 +1,4 @@
 # Python-document
 
-[tài liệu helloworld]('./Hello world')
-[tài liệu cú pháp]('./Syntax')
+- [tài liệu helloworld](Hello_world)
+- [tài liệu cú pháp](Syntax)
