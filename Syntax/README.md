@@ -151,3 +151,22 @@ def name():
 name()
 Print('Chuối' + X)
 ```
+# Kiểu dữ liệu
+- Python có các kiểu dữ liệu sau được tích hợp sẵn theo mặc định, trong các danh mục sau:
+```py
+
+Text_Type:	str
+Numeric_Types:	int, float, complex
+Sequence_Types:	list, tuple, range
+Mapping_Type:	dict
+Set_Types:	set, frozenset
+Boolean_Type:	bool
+Binary_Types:	bytes, bytearray, memoryview
+None_Type:	NoneType
+```
+# Type()
+- Có thể lấy kiểu dữ liệu bằng cách sử dụng hàm `Type()`
+```py
+X = 5
+Print(Type(X))
+```
