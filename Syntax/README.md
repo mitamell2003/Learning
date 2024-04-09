@@ -113,5 +113,32 @@ print(Z)
 - Có thể viết liền các biến với nhau bằng dấu `+` hoặc `,`
 - Lưu ý: Dấu `+` chỉ dùng khi các biến có cùng kiểu dữ liệu với nhau
 ```py
-
+X, Y, Z = 'Tên', 'Tui', 'là'
+print(X + Y + Z)
+print(X, Y, Z)
+# or
+X, Y, Z = 'Tuổi', 15, 10
+print(X, Y, Z)
+# True
+X, Y, Z = 'Tuổi', 15, 10
+print(X + Z)
+# False
 ```
+# Biến toàn cục
+- `Biến toàn cục` được tạo bên ngoài một hàm, có thể sử dụng lại được nhiều lần.
+```py
+X = 'Tiên'
+def tentien():
+    print('Tên là ' + X)
+tentien()    
+```
+- Có thể tạo một biến (cùng tên với biến toàn cục) bên trong hàm được gọi là `biến cục bộ` và chỉ sử dụng bên trong hàm đó, Không ảnh hưởng đến biến toàn cục
+```py
+X = 'Cat'
+def animal():
+    X = 'Động vật ăn thịt'
+    print('Mèo là ' + X)
+animal()
+print(X + 'is an animal')
+```
+

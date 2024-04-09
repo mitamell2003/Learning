@@ -26,3 +26,18 @@
 # print(X)
 # print(Y)
 # print(Z)
+# X, Y, Z = 'Tên', 'Tui', 'là'
+# print(X + Y + Z)
+# print(X, Y, Z)
+# X, Y, Z = 'Tuổi', 15, 10
+# print(X, Y, Z)
+# X = 'Tiên'
+# def tentien():
+#     print('Tên là ' + X)
+# tentien()    
+X = 'Cat'
+def animal():
+    X = 'Động vật ăn thịt'
+    print('Mèo là ' + X)
+animal()
+print(X + ' is an animal')
