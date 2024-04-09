@@ -141,4 +141,13 @@ def animal():
 animal()
 print(X + 'is an animal')
 ```
-
+# Tạo biến toàn cục bên trong hàm
+- Có thể tạo biến toàn cục bên trong hàm thay vì chỉ tạo được biến cục bộ bằng cách dùng lện `global`
+```py
+x = 'Apple'
+def name():
+    global X
+    X = 'Banana'
+name()
+Print('Chuối' + X)
+```

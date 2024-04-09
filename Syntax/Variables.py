@@ -35,9 +35,15 @@
 # def tentien():
 #     print('Tên là ' + X)
 # tentien()    
-X = 'Cat'
-def animal():
-    X = 'Động vật ăn thịt'
-    print('Mèo là ' + X)
-animal()
-print(X + ' is an animal')
+# X = 'Cat'
+# def animal():
+#     X = 'Động vật ăn thịt'
+#     print('Mèo là ' + X)
+# animal()
+# print(X + ' is an animal')
+# X = 'Apple'
+# def name():
+#     global X
+#     X = 'Banana'
+# name()
+# print('Chuối' + X)
