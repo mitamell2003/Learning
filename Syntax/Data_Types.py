@@ -24,3 +24,36 @@
 # y = str(3)
 # z = str(3.0)
 # print(X, Y, Z, a, b, c, x, y, z)
+# for X in 'Mini':
+#     print(X)
+# X = 'Nguyễn A'
+# print(len(X))
+# Text = 'Thằng giới đáng ghét'
+# print('ghét' in Text)
+# Text = 'Thằng giới đáng ghét'
+# if 'ghét' in Text:
+#     print('Có ở trong đây nha má !')
+# X = 'Đinh Thị Thu Nguyên'
+# print(X[2:5])
+# X = 'Mini, mèo'
+# print(X[4:])
+# fruits = 'banana, apple'
+# b = "Hello, World!"
+# print(fruits[-2:-5])
+# fruits = 'banana, apple'
+# print(fruits[1:2])
+# A = 'Chó Giới'
+# print(A.lower())
+# b = " hi, my name is bò  " 
+# print(b.split(","))
+# X = 38
+# text = f"ông Lâm năm nay {X} tuổi"
+# print(text)
+# X = 87
+# text = f"Số {X:.2f} là số thập phân"
+# print(text)
+# text = f"đáp án của phép toán trên là {20*56}"
+# print(text)
+# A = 'chào nhau nào'
+# for i in A.split(" "):
+#     print(i.capitalize(), end=" ")

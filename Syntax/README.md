@@ -211,3 +211,125 @@ y = str(3)
 z = str(3.0)
 print(X, Y, Z, a, b, c, x, y, z)
 ```
+# Chuỗi nhiều dòng
+- có thể gán một chuỗi nhiều dòng bằng cách sử dụng `"""` hoặc `'''`
+```py
+a = ''' Nguyễn Văn A,
+1012/1111/111,
+địa chỉ: zzzzzz,zzzzzzz '''
+print(a)  
+```
+# Chuỗi là một mảng
+- Python không có kiểu dữ liệu ký tự, một ký tự đơn giản là một chuỗi có độ dài là 1 
+- Có thể sử dụng dấu `[]` để truy cập tới các phần tử của chuỗi
+```py
+X = 'Nguyễn A'
+print(X[3])
+```
+# For loop string
+```py
+for X in 'Mini':
+    print(X)
+```
+# Độ dài chuỗi
+- Có thể đo độ dài một chuỗi `len()`
+```py
+X = 'Nguyễn A'
+print(len(X))
+```
+# kiểm tra một từ hay một cụm từ có hay không có trong chuỗi 
+- để kiểm tra một từ hay một cụm từ có trong chuỗi sử dụng từ `in`
+```py
+Text = 'Thằng giới đáng ghét'
+print('ghét' in Text)
+```
+- hoặc thêm `if`
+```py
+Text = 'Thằng giới đáng ghét'
+if 'ghét' in Text:
+    print('Có ở trong đây nha má !')
+```
+- Ngược lại khi không có thì chỉ cần thêm dùng `not in`
+```py
+Text = 'Thằng giới đáng ghét'
+if 'thương' not in Text:
+    print('không có ở trong đây nha má !')
+```
+# Slicing
+```py
+X = 'Đinh Thị Thu Nguyên'
+print(X[2:5])
+```
+- Bắt đầu từ số 0, và sẽ lấy từ 2 đến 4
+# Slice From the Start and the end
+```py
+X = 'Mini, mèo'
+print(X[:4])
+```
+- Khi đặt dấu `:` ở trước số ký tự muốn lấy thì sẽ được hiểu là lấy từ đầu đến số đó và ngược lại cho phần end
+```py
+X = 'Mini, mèo'
+print(X[4:])
+```
+# Negative Indexing
+- có thể chỉ định bằng số âm bằng cách điếm từ cuối lên 
+```py
+fruits = 'banana, apple'
+print(fruits[-4:-1])
+```
+- lưu ý : Số phía trước phải nhỏ hơn số phía sau và chỉ có thể cùng là số nguyên âm hoặc cùng là số nguyên dương 
+# Viết Hoa `upper()`
+```py
+A = 'chó giới'
+print(A.upper())
+```
+# Viết Thường `lower()`
+```py
+A = 'Chó Gioi'
+print(A.lower())
+```
+# Loại bỏ khoảng trắng
+```py
+b = " hi, my name is bò / " 
+print(b.strip())
+```
+# Thay thế chuỗi
+```py
+b = "hi, my name is bò" 
+print(b.replace("h", "L")) 
+```
+# Tách Chuỗi
+```py
+b = " hi, my name is bò  " 
+print(b.split(","))
+```
+# Nối Chuỗi 
+- Có thể nối chuỗi bằng dấu `+` và thêm khoảng trắng ở giữa các chuỗi cần nối bằng dấu `" "`
+# String format
+- Có thể nối các chuỗi không cùng kiểu với nhau thông qua f-String `f {}`
+```py
+X = 38
+text = f"ông Lâm năm nay {X} tuổi"
+print(text)
+```
+- Có thể sữa đổi kiểu từ số nguyên sang số thập phân thông qua `:.2f`
+```py
+X = 87
+text = f"Số {X:.2f} là số thập phân"
+print(text)
+```
+- Thực hiện các phép toán
+```py
+text = f"đáp án của phép toán trên là {20*56}"
+print(text)
+```
+# Escape Characters
+- `\'`	(dấu ')	
+- `\\`	(dấu \ )	
+- `\n`	(dòng mới)	
+- `\r`	(chuyển lên đầu)	
+- `\t`	(Tab)	
+- `\b`	(Backspace)	
+- `\f`	(dữ liệu mẫu)	
+- `\ooo`(Octal value)	
+- `\xhh`(Hex value)
