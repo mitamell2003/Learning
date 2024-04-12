@@ -170,3 +170,44 @@ None_Type:	NoneType
 X = 5
 Print(Type(X))
 ```
+# Python number
+- Trong python có 3 loại số:
++ `int`
++ `float`
++ `complex`
+- có thể chuyển đổi kiểu này sang kiểu khác 
+```py
+X = 2 #int
+Y = 2.0 #float
+Z = 3j #complex
+a = float(X)
+b = int(Y)
+c = complex(Z)
+print(a)
+print(b)
+print(c)
+```
+- Lưu ý: Không thể chuyển đổi kiểu `complex`sang các kiểu khác
+# Random
+- Python không thể tạo các số ngẫu nhiên nhưng có thể dùng modum tích hợp `Random()`
+```py
+import random
+print(random.randrange(1, 10))
+```
+# Chỉ định loại biến
+- có thể chỉ định loại biến `int`, `float`, `str`
+- `int` chứa các số nguyên 
+- `float` chứa các số thập phân
+- `str` chứa các chuỗi, số nguyên và số thập phân 
+```py
+X = int(2)
+Y = int(3.9)
+Z = int("2")
+a = float(2.0)
+b = float(3)
+c = float('4')
+x = str('s1')
+y = str(3)
+z = str(3.0)
+print(X, Y, Z, a, b, c, x, y, z)
+```
