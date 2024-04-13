@@ -57,3 +57,24 @@
 # A = 'chào nhau nào'
 # for i in A.split(" "):
 #     print(i.capitalize(), end=" ")
+# list = ['táo', 'cam', 'xoài', 'ổi']
+# list.insert(2, 'quýt')
+# print(list)
+# list = ['cây', 'chó', 'mèo']
+# list[1] = 'Mít'
+# print(list)
+# list = ['cúc', 'đào', 'ớt']
+# list.remove('đào')
+# print(list)
+# list = ['mít', 'cam', 'xoài', 'mận', 'mít']
+# list.remove('mít')
+# print(list)
+# list = ['cafe', 'trà', 'nước', 'đá']
+# Mylist = ['cúc', 'đào', 'ớt']
+# list.extend(Mylist)
+# print(list)
+# thislist = ["apple", "banana", "cherry"]
+# for x in thislist:
+#   print(x)
+X = 'Nguyễn A'
+print(len(X))

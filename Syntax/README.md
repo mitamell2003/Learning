@@ -333,3 +333,87 @@ print(text)
 - `\f`	(dữ liệu mẫu)	
 - `\ooo`(Octal value)	
 - `\xhh`(Hex value)
+# Bool
+- Bool sẽ trả về giá trị `True`, `False` .Đa số sẽ là `True` trừ một số trường hợp sau:`0`, `False`, `None`, và khoảng trắng
+# Toán tử
+- Python chia các toán tử thành các nhóm sau:
++ Toán tử số học
++ Toán tử gán
++ Toán tử so sánh
++ Toán tử logic
++ Toán tử danh tính
++ Nhà điều hành thành viên
++ Toán tử Bitwise
+# List
+- có thể in ra một thành phần hoặc một khoảng trong danh sách
+- Có thể thay đổi một hay một phạm vi trong danh sách
+```py
+list = ['cây', 'chó', 'mèo']
+list[1] = 'Mít'
+print(list)
+```
+- có thể thêm một thành phần mới vào danh sách bằng cú pháp `append()` sẽ tự động chèn vào cuối danh sách hoặc `insert()` để thêm vào vị trí mong muốn 
+```py
+list = ['táo', 'cam', 'xoài', 'ổi']
+list.append('quýt')
+print(list)
+```
+```py
+list = ['táo', 'cam', 'xoài', 'ổi']
+list.insert(2, 'quýt')
+print(list)
+```
+- có thể xóa bằng cú pháp `remove()` 
+```py
+list = ['cúc', 'đào', 'ớt']
+list.remove('đào')
+print(list)
+```
+- Khi danh sách có nhiều tên trùng với nhau thì `remove()` sẽ xóa item đứng trước
+```py
+list = ['mít', 'cam', 'xoài', 'mận', 'mít']
+list.remove('mít')
+print(list)
+```
+- xóa mục bằng cú pháp `pop()`, khi không điền thứ tự của item thì sẽ tự động xóa item cuối cùng
+```py
+list = ['cafe', 'trà', 'nước', 'đá']
+list.pop(1)
+print(list)
+```
+```py
+list = ['cafe', 'trà', 'nước', 'đá']
+list.pop()
+print(list)
+```
+- Cũng có  thể xóa bằng key `del()`
+```py
+list = ['cafe', 'trà', 'nước', 'đá']
+del list[0]
+print(list)
+```
+- Xóa toàn bộ danh sách, sẽ xóa luôn danh sách này
+```py
+list = ['cafe', 'trà', 'nước', 'đá']
+del list()
+print(list)
+```
+- làm trống danh sách `clear()`. Danh sách vẫn còn, nhưng nó không có nội dung.
+```py
+list = ['cafe', 'trà', 'nước', 'đá']
+list.clear()
+print(list)
+```
+- có thể mở rộng danh sách, kết hợp các danh sách bằng lệnh `extend()`
+```py
+list = ['cafe', 'trà', 'nước', 'đá']
+Mylist = ['cúc', 'đào', 'ớt']
+list.extend(Mylist)
+print(list)
+```
+# Vòng lập `for`
+```py
+list = ['mango', 'banana', 'apple']
+for x in list:
+    print(x)
+```
