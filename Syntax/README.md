@@ -417,3 +417,132 @@ list = ['mango', 'banana', 'apple']
 for x in list:
     print(x)
 ```
+# Loop list
+```py
+thislist = ["apple", "banana", "cherry"]
+for i in range(len(thislist)):
+    print(thislist[i])
+```
+- `while`
+```py
+Tam = ['ta','Ta','tA']
+i = 0
+while i < len(Tam):
+    print(Tam[i])
+    i = i + 1
+```
+- Viết tắt
+```py
+myname = ['a','b','c']
+[print(x) for x in myname]
+```
+# List Comprehension
+```py
+animal = ['duck', 'chicken', 'dog', 'fish', 'cobra', 'cat']
+newlist = []
+for x in animal:
+    if 'c' in x:
+        newlist.append(x)
+print(newlist)
+```
+- viết tắt
+```py
+animal = ['duck', 'chicken', 'dog', 'fish', 'cobra', 'cat']
+newlist = [x for x in animal if 'c' in x]
+print(newlist)
+```
+# Sắp xếp `sort()`
+- `sort()` sẽ mặc định sắp xếp theo thứ tự tăng dần 
+```py
+animal = ['duck', 'chicken', 'dog', 'fish', 'cobra', 'cat']
+animal.sort()
+print(animal)
+```
+- để sắp xếp theo thứ tự giảm dần thì dùng thêm từ khóa `reverse = true`
+```py
+number = [100, 10, 4, 15, 120, 1]
+number.sort(reverse = True)
+print(number)
+```
+- có thể tùy chỉnh chức năng sắp xếp thông qua từ khóa `key = function`
+```py
+def myfunc(n):
+    return abs(n - 50)
+number = [100, 10, 4, 15, 120, 1]
+number.sort(key = myfunc)
+print(number)
+```
+- `sort()` sẽ tự động sắp xếp các chữ cái viết hoa trước các chữ cái viết thường,
+```py
+animal = ['duck', 'Chicken', 'Dog', 'fish', 'Cobra', 'cat']
+animal.sort()
+print(animal)
+```
+- vì vậy nếu không muốn có sự phân biệt giữ chữ viết hoa và thường thì có thể sử dụng từ khóa `key = str.lower`
+```py
+animal = ['duck', 'Chicken', 'Dog', 'fish', 'Cobra', 'cat']
+animal.sort(key = str.lower)
+print(animal)
+```
+- có thể đảo ngược danh sách thông qua `reverse()`
+```py
+animal = ['duck', 'Chicken', 'Dog', 'fish', 'Cobra', 'cat']
+animal.reverse()
+print(animal)
+```
+# Syntax
+```py
+animal = ['duck', 'Chicken', 'Dog', 'fish', 'Cobra', 'cat']
+newlist = [x for x in animal if x !='duck']
+print(newlist)
+```
+```py
+newlist = [x for x in range(10) if x < 3]
+print(newlist)
+```
+- có thể đặt kết quả tùy nhu cầu
+```py
+animal = ['duck', 'Chicken', 'Dog', 'fish', 'Cobra', 'cat']
+newlist = [x.upper() for x in animal if x != "Dog"] 
+print(newlist)
+```
+```py
+animal = ['duck', 'Chicken', 'Dog', 'fish', 'Cobra', 'cat']
+newlist = [x if x != 'Chicken' else 'crab' for x in aniaml]
+print(newlist)
+```
+# coppy list
+- Bạn không thể sao chép một danh sách đơn giản bằng cách gõ , bởi vì: `list2 = list1 list2 list1 list1 list2` sẽ chỉ là một tham chiếu đến
+- có thể sử dụng `copy()` và `list()` để tạo ra một bản sao
+```py
+animal = ['duck', 'Chicken', 'Dog', 'fish', 'Cobra', 'cat']
+newlist = animal.copy()
+print(newlist)
+```
+```py
+animal = ['duck', 'Chicken', 'Dog', 'fish', 'Cobra', 'cat']
+newlist = list(animal)
+print(newlist)
+```
+# join list 
+- có thể kết hợp hai danh sách bằng dấu `+`, `append()`, `extend()`
+```py
+list1 = [1, 3, 5, 7]
+list2 = ['a','b','c','d']
+newlist = list1 + list2
+print(newlist)
+```
+```py
+list1 = [1, 3, 5, 7]
+list2 = ['a','b','c','d']
+for x in list2
+    list1.append(x)
+print(x)
+```
+```py
+list1 = [1, 3, 5, 7]
+list2 = ['a','b','c','d']
+list1.extend(list2)
+print(list1)
+```
+

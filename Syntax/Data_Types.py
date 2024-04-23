@@ -76,5 +76,58 @@
 # thislist = ["apple", "banana", "cherry"]
 # for x in thislist:
 #   print(x)
-X = 'Nguyễn A'
-print(len(X))
+# X = 'Nguyễn A'
+# print(len(X))
+# thislist = ["apple", "banana", "cherry"]
+# for i in range(len(thislist)):
+#     print(thislist[i])
+# Tam = ['ta','Ta','tA']
+# i = 0
+# while i < len(Tam):
+#     print(Tam[i])
+#     i = i + 1
+# myname = ['a','b','c']
+# [print(x) for x in myname]
+# animal = ['duck', 'chicken', 'dog', 'fish', 'cobra', 'cat']
+# newlist = []
+
+# for x in animal:
+#     if 'c' in x:
+#         newlist.append(x)
+
+# print(newlist)
+# animal = ['duck', 'chicken', 'dog', 'fish', 'cobra', 'cat']
+# newlist = [x for x in animal if 'c' in x]
+# print(newlist)
+# animal = ['duck', 'chicken', 'dog', 'fish', 'cobra', 'cat']
+# animal.sort()
+# print(animal)
+# number = [100, 10, 4, 15, 120, 1]
+# number.sort(reverse = True)
+# print(number)
+# def myfunc(n):
+#     return abs(n - 50)
+# number = [100, 10, 4, 15, 120, 1]
+# number.sort(key = myfunc)
+# print(number)
+# animal = ['duck', 'Chicken', 'Dog', 'fish', 'Cobra', 'cat']
+# animal.reverse()
+# print(animal)
+# animal = ['duck', 'Chicken', 'Dog', 'fish', 'Cobra', 'cat']
+# newlist = [x for x in animal if x !='duck']
+# print(newlist)
+# number = [100, 10, 4, 15, 120, 1]
+# newlist = [x for x in range(10) if x < 3]
+# print(newlist)
+# animal = ['duck', 'Chicken', 'Dog', 'fish', 'Cobra', 'cat']
+# newlist = [x.upper() for x in animal if x != "Dog"] 
+# print(newlist)
+# animal = ['duck', 'Chicken', 'Dog', 'fish', 'Cobra', 'cat']
+# newlist = [x if x != 'Chicken' else 'crab' for x in animal]
+# print(newlist)
+# animal = ['duck', 'Chicken', 'Dog', 'fish', 'Cobra', 'cat']
+# newlist = animal.copy()
+# print(newlist)
+# animal = ['duck', 'Chicken', 'Dog', 'fish', 'Cobra', 'cat']
+# newlist = list(animal)
+# print(newlist)
