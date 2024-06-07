@@ -545,4 +545,262 @@ list2 = ['a','b','c','d']
 list1.extend(list2)
 print(list1)
 ```
+# Padas 
+# Pandas Series
+- Pandas Series giống như một cột trong bảng, nó là một mảng một chiều chứa được nhiều loại dữ liệu 
+```py
+import pandas as pd
+a = [1, 2, 3]
+myvar = pd.Series(a)
+print(myvar)
+```
+# Labels 
+- Nếu không có gì khác được chỉ định, các giá trị được gắn nhãn với số chỉ mục của chúng. Giá trị đầu tiên có chỉ số 0, giá trị thứ hai có chỉ số 1, v.v.
+- Nhãn này có thể được sử dụng để truy cập một giá trị được chỉ định.
+```py
+print(myvar[0])
+```
+# creat Labels
+- với `index` có thể đặt tên cho labels thay vì theo số 0,1,2..v..v thì đặt tên là x, y, z, ..v.v.v
+```py
+import pandas as pd
+a = [1, 2, 3]
+myvar = pd.Series(a, index = ["x", "y", "z"])
+print(myvar)
+```
+# Key/Value Objects as Series 
+```py
+import pandas as pd
+calo = {"day 1": 1200, "day 2": 1300, "day 3": 1200}
+myvar = pd.Series(calo)
+print(myvar)
+```
+- có thể chọn 1 số items từ dictionary bằng `index`
+```py
+import pandas as pd
+calo = {"day 1": 1200, "day 2": 1300, "day 3": 1200}
+myvar = pd.Series(calo, index = ["day 1", "day 2"])
+print(myvar)
+```
+# DataFrames 
+- Các tập dữ liệu trong Pandas thường là các bảng đa chiều, được gọi là DataFrames.
+- Series giống như một cột, DataFrame là toàn bộ bảng.
+```py
+# tạo DataFrames từ nhiều Series
+import pandas as pd
+data = {
+"calo": [1200,  1300,  1200],
+"duration": [50, 49, 45] 
+}
+myvar = pd.DataFrame(data)
+print(myvar)
+```
+# Pandas DataFrame loc Property
+- syntax : `dataframe.loc[row, column)`
+- Thuộc tính sẽ trả về các giá trị được chỉ định
+- Để truy cập nhiều hàng, hãy sử dụng dấu ngoặc kép và chỉ định các nhãn, được phân tách bằng dấu phẩy: `df.loc[["Sally", "John"]]`
+- Chỉ định cột bằng cách bao gồm nhãn của chúng trong danh sách khác: `df.loc[["Sally", "John"], ["age", "qualified"]]`
+- Bạn cũng có thể chỉ định một lát của DataFrame với nhãn from và to, được phân tách bằng dấu hai chấm: `df.loc["Sally": "John"]`
+- Nhãn đơn cho cả hàng và cột `["Sally", "age"]` Trả về nội dung của ô đó.
+- Nhãn đơn cho một hàng trả về Pandas Series `["Sally"]`
+- Danh sách các nhãn trả về Pandas DataFrame `[["Sally", "Mary"]]`
+```py
+# lệnh này sẽ trả về Pandas Series 
+import pandas as pd
+data = {
+"calo": [1200,  1300,  1200],
+"duration": [50, 49, 45] 
+}
+df = pd.DataFrame(data)
+print(df.loc[0])
+```
+```py
+# Lệnh này sẽ trả về Pandas DataFrame
+import pandas as pd
+data = {
+"calo": [1200,  1300,  1200],
+"duration": [50, 49, 45] 
+}
+df = pd.DataFrame(data)
+print(df.loc[[0, 1]])
+```
+- Có thể đặt tên cho mỗi hàng bằng `index`
+```py
+import pandas as pd
+data = {
+"calo": [1200,  1300,  1200],
+"duration": [50, 49, 45] 
+}
+df = pd.DataFrame(data, index = ["day 1", "day 2", "day 3"])
+print(df)
+```
+- Có thể dùng chỉ mục đã đặt tên để gọi hàng dữ liệu đó
+``` py 
+import pandas as pd
+data = {
+"calo": [1200,  1300,  1200],
+"duration": [50, 49, 45] 
+}
+df = pd.DataFrame(data, index = ["day 1", "day 2", "day 3"])
+print(df.loc["day 1"])
+```
+# Load Files Into a DataFrame 
+- Có thể thêm file data đã có sẵn vào DataFrame và sử dụng 
+```py
+import pandas as pd
+df = pd.read_csv('data')
+print(df)
+```
+# Read csv
+- Nếu bạn có DataFrame lớn với nhiều hàng, Pandas sẽ chỉ trả về 5 hàng đầu tiên và 5 hàng cuối cùng
+- có thể kiểm tra số hàng tối đa của hệ thống bằng câu lệnh : `pd.options.display.max_rows`
+```py
+import pandas as pd
+print(pd.options.display.max_rows) 
+```
+- có thể quy định số hàng tối đa cùng một câu lệnh
+```py
+import pandas as pd
+pd.options.display.max_rows = 999
+df = pd.read_csv('data')
+print(df)
+```
+# Read JSON
+- cú pháp trả về toàn bộ DataFrames : `.to_string()`
+``` py 
+import pandas as pd
+df = read_json('data')
+print(df.to_string())
+```
+- `JSON = Python Dictionary`
+- Các đối tượng JSON có cùng định dạng với Python Dictionary
+- Nếu mã JSON của bạn không nằm trong một tệp, nhưng trong dictionary Python, bạn có thể tải nó vào DataFrame trực tiếp 
+```py
+import pandas as pd
 
+data = {
+  "Duration":{
+    "0":60,
+    "1":60,
+    "2":60,
+    "3":45,
+    "4":45,
+    "5":60
+  },
+  "Pulse":{
+    "0":110,
+    "1":117,
+    "2":103,
+    "3":109,
+    "4":117,
+    "5":102
+  },
+  "Maxpulse":{
+    "0":130,
+    "1":145,
+    "2":135,
+    "3":175,
+    "4":148,
+    "5":127
+  },
+  "Calories":{
+    "0":409,
+    "1":479,
+    "2":340,
+    "3":282,
+    "4":406,
+    "5":300
+  }
+}
+
+df = pd.DataFrame(data)
+
+print(df) 
+```
+# Analyzing DataFrames 
+# Viewing the Data 
+- sử dụng `head()` để xem tổng quang về dataFrames. Phương thức trả về các tiêu đề và một số hàng được chỉ định, bắt đầu từ trên cùng.
+```py
+import pandas as pd
+
+df = pd.read_csv('data.csv')
+
+print(df.head(10)) # nếu không chỉ định thì sẽ mặc định là 5 hàng 
+```
+- `tail()` sẽ lấy về các hàng cuối cùng
+```py
+print(df.tail()) 
+```
+# Cleaning data 
+#  Cleaning Empty Cells
+- Một cách để xử lý các ô trống là loại bỏ các hàng có chứa các ô trống.
+- Điều này thường ổn, vì các tập dữ liệu có thể rất lớn và loại bỏ một vài hàng sẽ không ảnh hưởng lớn đến kết quả.
+```py
+import pandas as pd
+
+df = pd.read_csv('data.csv')
+new_df = df.dropna()
+
+print(new_df.to_string())
+```
+- `dropna()` sẽ trả về một dataFrames mới không thay đổi nguồn gốc
+- nếu muốn thay đổi data gốc có thể sử dụng `inplace = True` sẽ không trả về DataFrame mới, nhưng nó sẽ xóa tất cả các hàng chứa giá trị NULL khỏi DataFrame gốc.
+```py
+import pandas as pd
+
+df = pd.read_csv('data.csv')
+
+df.dropna(inplace = True)
+
+print(df.to_string())
+```
+- Thay thế các giá trị trống bằng `fillna()`
+```py
+import pandas as pd
+
+df = pd.read_csv('data.csv')
+
+df.fillna(130, inplace = True)
+```
+- có thể thay thế giá trị ở đúng cột đó 
+```py
+import pandas as pd
+
+df = pd.read_csv('data.csv')
+
+df["Calories"].fillna(130, inplace = True)
+```
+# mean()
+- `mean() = AVG`
+```py
+import pandas as pd
+
+df = pd.read_csv('data.csv')
+
+x = df["Calories"].mean()
+
+df["Calories"].fillna(x, inplace = True)
+
+```
+# median()
+- `median() = trung vị, khoảng giữa sau khi đã sắp xếp các giá trị Tăng dần`
+```py
+import pandas as pd
+
+df = pd.read_csv('data.csv')
+
+x = df["Calories"].median()
+
+df["Calories"].fillna(x, inplace = True)
+```
+# Mode()
+- `Mode = giá trị xuất hiện thường xuyên nhất`
+```py
+import pandas as pd
+
+df = pd.read_csv('data.csv')
+
+x = df["Calories"].median().[0]
+
+df["Calories"].fillna(x, inplace = True)
+```
