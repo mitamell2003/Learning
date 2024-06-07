@@ -804,3 +804,18 @@ x = df["Calories"].median().[0]
 
 df["Calories"].fillna(x, inplace = True)
 ```
+# CONCAT
+- dùng `concat` để nối các bảng dữ liệu lại với nhau
+```py
+pd.concat([df_product_1, df_product_2]) # sẽ chồng hai bảng dữ liệu lại với nhau
+```
+- có thể nối các bảng theo chiều ngang bằng lệnh `axis = 1`
+```py
+display(pd.concat([series1, series2], 
+                  axis = 1))
+```
+- Ghép 2 DataFrames với `ign_index = True`
+```py
+display(pd.concat([df1, df2], 
+                  ignore_index = True))
+```
